@@ -29,7 +29,7 @@ const options = {
       bearerAuth: [],
     }],
   },
-  apis: ['./src/interfaces/http/*.js'], // Caminho para os arquivos com as rotas
+  apis: ['./src/interfaces/http/*.js'], 
 };
 
 const specs = swaggerJsdoc(options);
