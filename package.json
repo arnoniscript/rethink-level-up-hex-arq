@@ -2,6 +2,7 @@
   "name": "rethink-level-up-hex-arq",
   "version": "1.0.0",
   "main": "index.js",
+  
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
