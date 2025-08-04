@@ -14,6 +14,21 @@ class TaskUseCases {
   async getTasksByUser(userId) {
     return this.taskRepository.findByUserId(userId);
   }
+
+  async completeTask(taskId, userId) {
+  const task = await this.taskRepository.findById(taskId);
+  
+  if (!task) {
+    throw new Error('Task not found');
+  }
+  
+  if (task.userId !== userId) {
+    throw new Error('Unauthorized');
+  }
+  
+  task.completed = true;
+  await this.taskRepository.save(task);
+}
 }
 
 module.exports = TaskUseCases;

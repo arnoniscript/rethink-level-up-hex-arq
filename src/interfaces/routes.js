@@ -21,6 +21,8 @@ router.post('/auth/register', (req, res) => authController.register(req, res));
 router.post('/auth/login', (req, res) => authController.login(req, res));
 router.post('/tasks', (req, res) => taskController.createTask(req, res)); 
 router.get('/tasks', (req, res) => taskController.getTasks(req, res));
+router.patch('/tasks/:id/complete', (req, res) => taskController.completeTask(req, res));
+
 
 
 

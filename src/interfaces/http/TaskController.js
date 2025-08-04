@@ -19,6 +19,16 @@ class TaskController {
     const tasks = await this.taskUseCases.getTasksByUser(req.userId);
     res.json(tasks);
   }
+
+ async completeTask(req, res) {
+  try {
+    const taskId = req.params.id;
+    await this.taskUseCases.completeTask(taskId, req.userId);
+    res.status(204).end();
+  } catch (error) {
+    res.status(404).json({ error: error.message });
+  }
+}
 }
 
 module.exports = TaskController;
