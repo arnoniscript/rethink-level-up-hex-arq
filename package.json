@@ -3,20 +3,27 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
-    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.17.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "@sinonjs/fake-timers": "^14.0.0",
+    "bcrypt": "^6.0.0",
+    "jest": "^30.0.5",
+    "jsonwebtoken": "^9.0.2",
+    "sinon": "^21.0.0"
   }
 }
