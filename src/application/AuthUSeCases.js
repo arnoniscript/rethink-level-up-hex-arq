@@ -1,3 +1,7 @@
+const bcrypt = require('bcrypt'); 
+const jwt = require('jsonwebtoken');
+const User = require('../domain/User');
+
 class AuthUseCases {
   constructor(userRepository, jwtSecret) {
     this.userRepository = userRepository;
