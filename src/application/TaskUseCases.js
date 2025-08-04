@@ -1,3 +1,5 @@
+const Task = require('../domain/Task');
+
 class TaskUseCases {
   constructor(taskRepository) {
     this.taskRepository = taskRepository;
